@@ -60,7 +60,7 @@ class Song
     song.name = filename_array[1].lstrip
     song.artist_name = filename_array[0].rstrip
     song.save
-    sond
+    song
   end
 
 end

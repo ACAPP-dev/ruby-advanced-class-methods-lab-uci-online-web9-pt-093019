@@ -46,5 +46,10 @@ class Song
     @@all.sort{|song_element1, song_element2| song_element1.name <=> song_element2.name}
   end
 
+  def self.new_from_filename(filename)
+    filename.split(/[-.])
+    binding.pry
+
+  end
 
 end

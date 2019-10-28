@@ -36,10 +36,9 @@ class Song
       binding.pry
       if class_element.name == name
         return class_element
-
       end
-        return false
     end
+      return false
 
   end
 end

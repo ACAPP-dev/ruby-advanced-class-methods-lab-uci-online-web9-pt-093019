@@ -55,9 +55,12 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    new_from_filename(filename)
-    self.class.all << self
-
+    filename_array = filename.split(/[-.]|\./)
+    song = self.new
+    song.name = filename_array[1].lstrip
+    song.artist_name = filename_array[0].rstrip
+    song.save
+    sond
   end
 
 end

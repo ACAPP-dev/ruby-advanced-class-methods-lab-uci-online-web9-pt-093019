@@ -56,10 +56,11 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    filename_array = filename.split(/[-.]|\./)
-    song = self.new
-    song.name = filename_array[1].lstrip
-    song.artist_name = filename_array[0].rstrip
+    new_from_filename(filename)
+    #filename_array = filename.split(/[-.]|\./)
+    #song = self.new
+    #song.name = filename_array[1].lstrip
+    #song.artist_name = filename_array[0].rstrip
     song.save
     song
   end

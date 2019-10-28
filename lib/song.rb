@@ -50,7 +50,7 @@ class Song
     filename_array = filename.split(/[-.]|\./)
     song = self.new
     song.name = filename_array[1].lstrip
-    song.artist_name = filename_array[0]
+    song.artist_name = filename_array[0].rstrip
     song
     #binding.pry
 

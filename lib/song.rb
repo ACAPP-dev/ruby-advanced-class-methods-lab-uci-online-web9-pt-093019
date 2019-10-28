@@ -1,8 +1,7 @@
 require 'pry'
 class Song
   attr_accessor :name, :artist_name
-  song = nil
-  @@all = []
+    @@all = []
 
   def self.all
     @@all
@@ -57,12 +56,12 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    new_from_filename(filename)
+    #new_from_filename(filename) #=> unable to get this to work - why won't the local variable song work?
 
-    #filename_array = filename.split(/[-.]|\./)
-    #song = self.new
-    #song.name = filename_array[1].lstrip
-    #song.artist_name = filename_array[0].rstrip
+    filename_array = filename.split(/[-.]|\./)
+    song = self.new
+    song.name = filename_array[1].lstrip
+    song.artist_name = filename_array[0].rstrip
     song.save
     song
   end

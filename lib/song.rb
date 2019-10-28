@@ -52,7 +52,6 @@ class Song
     song.name = filename_array[1].lstrip
     song.artist_name = filename_array[0].rstrip
     song
-    binding.pry
   end
 
   def self.create_from_filename(filename)
